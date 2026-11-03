@@ -9,9 +9,13 @@ class Program
         int year;
         Console.WriteLine("Veuillez insérer une année: ");
         year = Convert.ToInt32(Console.ReadLine());
-        
-        Console.WriteLine(year + " n'est pas une année bissextile.");
-        
-        Console.WriteLine(year + " est une année bissextile.");
+
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+        {
+            Console.WriteLine(year + " est une année bissextile.");
+        } else
+        {
+            Console.WriteLine(year + " n'est pas une année bissextile.");
+        }
     }
 }
